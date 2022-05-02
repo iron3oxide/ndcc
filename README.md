@@ -18,7 +18,16 @@ For now, these are the charts one can choose between to determine value:
 To account for drafts with a lot of compensatory picks, each chart is "prolonged" to 270 picks, 
 using estimates on what the remaining values would be. 
 
+## installation
+
+
+
 ## usage
+
+```
+python -m ndcc
+```
+
 
 ## adding charts
 
