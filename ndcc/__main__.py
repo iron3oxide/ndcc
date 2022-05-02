@@ -1,6 +1,6 @@
 from rich.console import Console
 
-import compare
+from ndcc import compare
 
 
 def main():
