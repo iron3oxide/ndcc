@@ -1,6 +1,6 @@
 from prompt_toolkit.shortcuts import checkboxlist_dialog, input_dialog
 
-import validate
+from ndcc import validate
 
 
 def get_selected_charts() -> list[str]:
