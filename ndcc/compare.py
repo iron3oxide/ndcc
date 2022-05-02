@@ -1,3 +1,4 @@
+import os.path
 import pandas
 
 from rich.table import Table
@@ -8,7 +9,11 @@ from ndcc import input
 def get_tables() -> list[Table]:
     selected_charts: list[str] = input.get_selected_charts()
     index_and_selected_charts: list[str] = ["Pick #"] + selected_charts
-    charts: pandas.DataFrame = pandas.read_csv("./data/charts.csv", usecols=index_and_selected_charts, index_col=0)
+
+    path = os.path.dirname(os.path.realpath(__file__))
+
+    charts: pandas.DataFrame = \
+        pandas.read_csv(path + "/data/charts.csv", usecols=index_and_selected_charts, index_col=0)
 
     collection_count: int = input.get_collection_count()
 
