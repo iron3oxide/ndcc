@@ -12,8 +12,9 @@ def get_tables() -> list[Table]:
 
     path = os.path.dirname(os.path.realpath(__file__))
 
-    charts: pandas.DataFrame = \
-        pandas.read_csv(path + "/data/charts.csv", usecols=index_and_selected_charts, index_col=0)
+    charts: pandas.DataFrame = pandas.read_csv(
+        path + "/data/charts.csv", usecols=index_and_selected_charts, index_col=0
+    )
 
     collection_count: int = input.get_collection_count()
 
@@ -47,7 +48,7 @@ def get_tables() -> list[Table]:
 
 
 def _get_pick_table(collection_name: str, filtered_df: pandas.DataFrame) -> Table:
-    
+
     pick_table: Table = Table(title=collection_name)
     pick_table.add_column("Pick", style="cyan")
 
