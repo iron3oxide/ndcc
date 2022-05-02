@@ -20,7 +20,9 @@ using estimates on what the remaining values would be.
 
 ## installation
 
-
+```
+pip install ndcc
+```
 
 ## usage
 
