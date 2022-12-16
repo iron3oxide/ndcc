@@ -42,8 +42,6 @@ class DraftCapitalComparator:
         self.tables.insert(0, comparison_table)
 
     def _add_pick_tables(self, collection_count: int):
-        collection_rows: list[tuple] = []
-
         for collection_number in range(1, collection_count + 1):
 
             collection_name: str = input.get_collection_name(collection_number)
@@ -56,10 +54,8 @@ class DraftCapitalComparator:
             for chart in filtered_df.columns:
                 collection_row += (str(filtered_df[chart].sum()),)
 
-            collection_rows.append(collection_row)
+            self.collection_rows.append(collection_row)
             self.tables.append(self._get_pick_table(collection_name, filtered_df))
-
-        return collection_rows
 
     def _get_pick_table(
         self, collection_name: str, filtered_df: pandas.DataFrame
