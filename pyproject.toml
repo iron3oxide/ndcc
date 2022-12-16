@@ -2,7 +2,7 @@
 name = "ndcc"
 version = "0.2.0"
 description = "tba"
-authors = ["iron3oxide <jason.hottelet@gmx.de>"]
+authors = ["iron3oxide <jason.hottelet@tuta.io>"]
 license = "MIT"
 readme = "README.md"
 include = ["ndcc.data"]
