@@ -4,6 +4,7 @@
         "charts.csv",
         "main",
         "readme",
-        "compare"
+        "compare",
+        "input"
     ]
 }
