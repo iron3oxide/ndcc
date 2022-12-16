@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "project",
         "charts.csv",
-        "main"
+        "main",
+        "readme"
     ]
 }
