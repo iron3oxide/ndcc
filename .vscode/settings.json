@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "project",
-        "charts.csv"
+        "charts.csv",
+        "main"
     ]
 }
