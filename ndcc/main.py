@@ -1,10 +1,11 @@
 from rich.console import Console
 
-from ndcc import compare
+from ndcc.compare import DraftCapitalComparator
 
 
 def main():
     console = Console()
-    tables = compare.get_tables()
+    comparator = DraftCapitalComparator()
+    tables = comparator.get_tables()
     for table in tables:
         console.print(table)

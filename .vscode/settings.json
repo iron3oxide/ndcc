@@ -3,6 +3,7 @@
         "project",
         "charts.csv",
         "main",
-        "readme"
+        "readme",
+        "compare"
     ]
 }
