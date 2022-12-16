@@ -35,7 +35,7 @@ def get_tables() -> list[Table]:
         collection_rows.append(collection_row)
         tables.append(_get_pick_table(collection_name, filtered_df))
 
-    comparison_table: Table = Table(title="Comparison")
+    comparison_table: Table = Table(title="Comparison", style="purple")
     comparison_table.add_column("Collection")
     for chart in charts.columns:
         comparison_table.add_column(chart)
