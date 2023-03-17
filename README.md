@@ -1,19 +1,18 @@
 # ndcc - NFL Draft Capital Comparator
 
 A simple CLI App
- to compare the value
- of up to 32 NFL draft pick collections
- with one another.
- This can be useful when trying to determine
- which team in the draft has the most draft capital,
- or by how much a team increased
- or decreased their capital
- with their draft day (pick) trades.
- The most obvious use case however is to determine
- who won a pick trade according to different value charts.
+to compare the value
+of up to 32 NFL draft pick collections
+with one another.
+This can be useful when trying to determine
+which team in the draft has the most draft capital,
+or by how much a team increased
+or decreased their capital
+with their draft day (pick) trades.
+The most obvious use case however is to determine
+who won a pick trade according to different value charts.
 
-For now,
- these are the charts one can choose between to determine value:
+For now, these are the charts one can choose between to determine value:
 
 * [Jimmy Johnson](https://www.drafttek.com/nfl-trade-value-chart.asp)
 * [Rich Hill](https://www.drafttek.com/NFL-Trade-Value-Chart-Rich-Hill.asp)
@@ -22,10 +21,20 @@ For now,
 * [PFF WAR](https://www.pff.com/news/draft-pff-data-study-breaking-down-every-nfl-teams-draft-capital-jacksonville-jaguars)
 * [Michael Lopez (blended curve)](https://statsbylopez.netlify.app/post/rethinking-draft-curve/)
 * [Chase Stuart](http://www.footballperspective.com/draft-value-chart/)
+* [Ben Baldwin (On-Field Value + Surplus Value, both excluding QBs)](https://www.opensourcefootball.com/posts/2023-02-23-nfl-draft-value-chart/)
 
 To account for drafts with a lot of compensatory picks,
- each chart is "prolonged" to 270 picks,
- using estimates on what the remaining values would be.
+each chart is "prolonged" to 270 picks,
+using estimates on what the remaining values would be.
+Since there is no consensus last pick between the charts
+and none of them accounts for 270 picks,
+the projected value of pick numbers > ~255 is technically undefined
+for most of the included charts.
+
+Both charts by Ben Baldwin explicitly exclude pick trades
+that lead to the selection of a QB,
+as (according to the author) the exceptional of the position
+requires a separate calculation.
 
 ## installation
 
@@ -42,13 +51,13 @@ python -m ndcc
 ## adding charts
 
 To add another chart,
- simply add a column in charts.csv,
- fill in the values
- and add the column name
- and chart name
- you want to be presented with
- to the values
- (and default_values,
- if you want the chart to be selected by default)
- of the checkboxlist_dialog
- in input.get_selected_charts().
+simply add a column in charts.csv,
+fill in the values
+and add the column name
+and chart name
+you want to be presented with
+to the values
+(and default_values,
+if you want the chart to be selected by default)
+of the checkboxlist_dialog
+in input.get_selected_charts().
